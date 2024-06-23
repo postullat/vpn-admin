@@ -2,6 +2,7 @@ const { auth } = require('express-openid-connect');
 const { requiresAuth } = require('express-openid-connect');
 const express = require('express');
 const app = express();
+app.disable('x-powered-by');
 const userRouter = require('./src/routes/user.router');
 
 const config = {
